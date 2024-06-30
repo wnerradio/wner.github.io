@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WNER Radio Online - La mejor cadena de radio de Cuba, disponible en la Florida, España, América y todos los países de habla hispana. Escucha nuestras emisoras NeonRadioXL y Romance106 en vivo. La mejor música variada y romántica.">
+    <meta name="keywords" content="WNER, Radio Online, NeonRadioXL, Romance106, mejor radio de Cuba, radio en la Florida, radio en España, música variada, música romántica, radio en vivo, radio en América, radio en países de habla hispana, Radio Garden, TuneIn, iVoox, Frontier, Auna, Audials, Shoutcast, Winamp, VLC, Facebook, X, TikTok, Google Cuba, Bing">
+    <meta name="author" content="WNER Radio Online">
+    <meta name="robots" content="index, follow">
+    <title>WNER Radio Online - La Mejor Cadena de Radio de Cuba</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Black */
+            color: #fff; /* White */
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        .radio-station {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: linear-gradient(90deg, #C0C0C0, #000); /* Gradient from silver to black, left to right */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            color: #fff; /* White text */
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .radio-station:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+        .radio-station img {
+            max-width: 132px; /* Increased width by additional 10% */
+            height: auto;
+            border-radius: 50%; /* Circular images */
+        }
+        .radio-station-info {
+            margin-top: 10px;
+        }
+        .radio-station-info h2 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .radio-station-info p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+        .audio-controls {
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .audio-controls audio {
+            width: 90%; /* Reduced width for better fit */
+            display: block; /* Ensure audio controls are displayed */
+        }
+        .stop-button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #ff0000; /* Pure Red */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 0.6em; /* Smaller font size */
+            font-weight: bold;
+            border-radius: 50%; /* Rounded button */
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-align: center;
+        }
+        .stop-button:hover {
+            background-color: #cc0000; /* Darker red on hover */
+            transform: scale(1.05);
+        }
+        .stop-button:active {
+            background-color: #990000; /* Even darker red on click */
+            transform: scale(0.95);
+        }
+
+        @media(min-width: 768px) {
+            .container {
+                width: 80%;
+            }
+            .radio-station {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+            .radio-station img {
+                max-width: 105.6px; /* Increased width by additional 10% */
+            }
+            .radio-station-info {
+                flex: 1;
+                margin-left: 20px;
+            }
+            .audio-controls {
+                flex-direction: row;
+                align-items: center;
+                width: auto;
+            }
+            .audio-controls audio {
+                width: 300px; /* Fixed width for larger screens */
+            }
+            .stop-button {
+                margin-left: 20px; /* Additional margin for larger screens */
+                margin-top: 0; /* Remove top margin for larger screens */
+            }
+        }
+        .seo-text {
+            display: none;
+        }
+        .justified-text {
+            text-align: justify;
+            font-size: 0.6em; /* Smaller font size */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="radio-station">
+            <img src="https://cache.usercontentapp.com/logo/137679-1.jpg" alt="Logo NeonRadioXL">
+            <div class="radio-station-info">
+                <h2>NeonRadioXL</h2>
+                <p>La mejor música variada de Cuba, la Florida, España y América.</p>
+            </div>
+            <div class="audio-controls">
+                <audio id="audio1" controls preload="auto">
+                    <source src="https://s12.myradiostream.com/16754/listen.mp3" type="audio/mpeg">
+                    Tu navegador no soporta la reproducción de audio.
+                </audio>
+                <button class="stop-button" onclick="stopAudio('audio1')" aria-label="Detener NeonRadioXL">DETENER</button>
+            </div>
+        </div>
+        <div class="radio-station">
+            <img src="https://cache.usercontentapp.com/logo/138816.jpg" alt="Logo Romance106">
+            <div class="radio-station-info">
+                <h2>Romance106</h2>
+                <p>La mejor música romántica de Cuba, la Florida, España y América.</p>
+            </div>
+            <div class="audio-controls">
+                <audio id="audio2" controls preload="auto">
+                    <source src="https://s13.myradiostream.com/41400/listen.mp3" type="audio/mpeg">
+                    Tu navegador no soporta la reproducción de audio.
+                </audio>
+                <button class="stop-button" onclick="stopAudio('audio2')" aria-label="Detener Romance106">DETENER</button>
+            </div>
+        </div>
+        <div class="justified-text">
+            <p>WNER Radio Online es la mejor Cadena de Radio de Cuba, reconocida en la Florida, España, América y todos los países de habla hispana. Ofrecemos la mejor música variada y romántica a través de nuestras emisoras NeonRadioXL y Romance106. Escúchanos en vivo desde cualquier parte del mundo a través de la mayoría de las plataformas de Radio Online.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('play', function(e) {
+            var audios = document.querySelectorAll('audio');
+            audios.forEach(function(audio) {
+                if (audio !== e.target) {
+                    audio.pause();
+                    audio.currentTime = 0;
+                }
+            });
+        }, true);
+
+        function stopAudio(audioId) {
+            var audio = document.getElementById(audioId);
+            audio.pause();
+            audio.currentTime = 0;
+        }
+    </script>
+
+    <div class="seo-text">
+        <!-- Hidden content for SEO purposes -->
+        WNER Radio Online es la mejor Cadena de Radio de Cuba, reconocida en la Florida, España, América y todos los países de habla hispana. Ofrecemos la mejor música variada y romántica a través de nuestras emisoras NeonRadioXL y Romance106. Escúchanos en vivo desde cualquier parte del mundo.
+    </div>
+</body>
+</html>
